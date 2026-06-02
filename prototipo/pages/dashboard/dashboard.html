@@ -207,17 +207,5 @@
 
     </main>
 
-    <script>
-        // Pequeño script para asegurar que las animaciones se vean fluidas al cambiar de rol
-        document.querySelectorAll('input[name="role-toggle"]').forEach(radio => {
-            radio.addEventListener('change', () => {
-                const main = document.querySelector('main');
-                main.style.opacity = '0';
-                setTimeout(() => {
-                    main.style.opacity = '1';
-                }, 50);
-            });
-        });
-    </script>
 </body>
 </html>
