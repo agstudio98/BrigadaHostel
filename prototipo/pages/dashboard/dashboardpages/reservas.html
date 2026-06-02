@@ -194,7 +194,7 @@
                         <td>Suite Deluxe (101)</td>
                         <td><span class="status-badge status-pending">Pendiente</span></td>
                         <td style="text-align: right;">
-                            <label for="toggle-gestion" class="btn-outline" style="padding: 6px 14px; font-size: 0.8rem; border-radius: 8px; cursor: pointer;">Gestionar</label>
+                            <button type="button" onclick="document.getElementById('toggle-gestion').click()" class="btn-outline" style="padding: 6px 14px; font-size: 0.8rem; border-radius: 8px; cursor: pointer;">Gestionar</button>
                         </td>
                     </tr>
                     <tr>
@@ -210,7 +210,7 @@
                         <td>Doble (102)</td>
                         <td><span class="status-badge status-active">En curso</span></td>
                         <td style="text-align: right;">
-                            <label for="toggle-gestion" class="btn-outline" style="padding: 6px 14px; font-size: 0.8rem; border-radius: 8px; cursor: pointer;">Gestionar</label>
+                            <button type="button" onclick="document.getElementById('toggle-gestion').click()" class="btn-outline" style="padding: 6px 14px; font-size: 0.8rem; border-radius: 8px; cursor: pointer;">Gestionar</button>
                         </td>
                     </tr>
                 </tbody>
@@ -223,8 +223,8 @@
                 <h2>Confirmar Check-in</h2>
                 <p class="color-secondary mt-20" style="font-size: 1.05rem; line-height: 1.6;">¿Deseas confirmar la llegada del huésped <strong>Juan Pérez</strong> para la reserva <strong>#BH-9921</strong>?</p>
                 <div class="modal-actions mt-32">
-                    <label for="toggle-checkin" class="btn-outline" style="cursor: pointer;">Cancelar</label>
-                    <label for="toggle-checkin" class="btn-premium" style="background: #10b981; cursor: pointer;">Confirmar Check-in</label>
+                    <button type="button" onclick="document.getElementById('toggle-checkin').click()" class="btn-outline" style="cursor: pointer;">Cancelar</button>
+                    <button type="button" onclick="document.getElementById('toggle-checkin').click()" class="btn-premium" style="background: #10b981; cursor: pointer;">Confirmar Check-in</button>
                 </div>
             </div>
         </div>
