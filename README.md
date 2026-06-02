@@ -263,6 +263,15 @@ El proyecto utiliza una metodología basada en ramas para facilitar el trabajo c
 
 ---
 
+## Herramientas y Asistencia de IA
+
+Este proyecto ha contado con la asistencia de **Gemini CLI** para tareas de refactorización, optimización de estilos y organización de repositorio. 
+
+**Nota de Responsabilidad:** 
+Como equipo, asumimos la responsabilidad total sobre el código incluido. Comprendemos que todo código generado por IA o basado en plantillas debe ser revisado, comprendido y validado antes de su integración final para asegurar su correcto funcionamiento y mantenimiento.
+
+---
+
 ## About
 
 Proyecto de Evidencia 1 — Sistema de administración hotelera.
