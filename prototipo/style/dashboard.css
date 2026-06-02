@@ -12,6 +12,9 @@
     --text-light: #f8f9fa;
     --border-color: #e2e8f0;
     --accent-color: #334155;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+    --accent-yellow: #f59e0b;
     --hover-color: #2d3748;
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
     --shadow-md: 0 8px 16px -4px rgba(0,0,0,0.1), 0 4px 8px -4px rgba(0,0,0,0.06);
@@ -183,21 +186,8 @@ header {
     font-weight: 500;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 8px 16px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-color);
-}
+/* User Info styles moved to specific section */
 
-.user-info span {
-    font-weight: 600;
-    font-size: 0.9rem;
-}
 
 .user-avatar-icon {
     margin-left: 10px;

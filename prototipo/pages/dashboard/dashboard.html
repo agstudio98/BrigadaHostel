@@ -73,142 +73,95 @@
     <main class="p-4">
         <!-- MÉTRICAS CLAVE -->
         <div class="row g-4 mb-4">
-            <!-- Anticipación de Reserva Promedio -->
+            <!-- Tasa de Ocupación -->
             <div class="col-sm-6 col-xl-3">
                 <div class="card h-100 border-0 shadow-sm p-3">
                     <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Anticipación Promedio</h3>
+                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Ocupación Hoy</h3>
                         <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
                         </div>
                     </div>
-                    <div class="h2 fw-bold text-dark mb-1">12.4 Días</div>
-                    <div class="small text-success fw-bold">▲ 2.1 vs mes pasado</div>
+                    <div class="h2 fw-bold text-dark mb-1">85%</div>
+                    <div class="small text-success fw-bold">12 habitaciones ocupadas</div>
                 </div>
             </div>
-            <!-- Tasa de Abandono en Checkout -->
+            <!-- Próximos Check-ins -->
             <div class="col-sm-6 col-xl-3">
                 <div class="card h-100 border-0 shadow-sm p-3">
                     <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Abandono Checkout</h3>
+                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Check-ins Hoy</h3>
                         <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
                         </div>
                     </div>
-                    <div class="h2 fw-bold text-dark mb-1">24.8%</div>
-                    <div class="small text-primary fw-bold">▼ 5% mejora</div>
+                    <div class="h2 fw-bold text-dark mb-1">5</div>
+                    <div class="small text-primary fw-bold">Pendientes de ingreso</div>
                 </div>
             </div>
-            <!-- Ratio de Cancelación Post-Reserva -->
+            <!-- Habitaciones Disponibles -->
             <div class="col-sm-6 col-xl-3">
                 <div class="card h-100 border-0 shadow-sm p-3">
                     <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Ratio Cancelación</h3>
+                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Disponibles</h3>
                         <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
                         </div>
                     </div>
-                    <div class="h2 fw-bold text-dark mb-1">4.2%</div>
-                    <div class="small text-danger fw-bold">▲ 0.8% riesgo</div>
+                    <div class="h2 fw-bold text-dark mb-1">3</div>
+                    <div class="small text-info fw-bold">Listas para asignar</div>
                 </div>
             </div>
-            <!-- Duración Promedio de Estadía (LOS) -->
+            <!-- Limpieza Requerida -->
             <div class="col-sm-6 col-xl-3">
                 <div class="card h-100 border-0 shadow-sm p-3">
                     <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Estadía Promedio (LOS)</h3>
+                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Limpieza</h3>
                         <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
                         </div>
                     </div>
-                    <div class="h2 fw-bold text-dark mb-1">3.2 Noches</div>
-                    <div class="small text-success fw-bold">▲ 0.5 noches</div>
+                    <div class="h2 fw-bold text-dark mb-1">2</div>
+                    <div class="small text-danger fw-bold">Habitaciones sucias</div>
                 </div>
             </div>
         </div>
 
-        <!-- GRÁFICOS Y ESTADÍSTICAS DETALLADAS -->
+        <!-- LISTADO RÁPIDO DE ACTIVIDAD -->
         <div class="row g-4">
-            <!-- Embudo de Conversión de Venta -->
-            <div class="col-lg-6">
-                <section class="card border-0 shadow-sm h-100 p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="h5 fw-bold mb-0 text-dark">Embudo de Conversión</h2>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-                    </div>
-                    <div class="funnel-container d-flex flex-column gap-2">
-                        <div class="funnel-step bg-dark text-white p-2 rounded text-center small opacity-100">Búsquedas (100%) - 4.2k</div>
-                        <div class="funnel-step bg-primary text-white p-2 rounded text-center small opacity-75 mx-auto w-75">Ver Disponibilidad (65%) - 2.7k</div>
-                        <div class="funnel-step bg-primary text-white p-2 rounded text-center small opacity-50 mx-auto w-50">Calcular Costo (30%) - 1.2k</div>
-                        <div class="funnel-step bg-info text-white p-2 rounded text-center small opacity-25 mx-auto w-25">Registrar Reserva (12%) - 504</div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Top Servicios Adicionales -->
-            <div class="col-lg-6">
-                <section class="card border-0 shadow-sm h-100 p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="h5 fw-bold mb-0 text-dark">Top Servicios Extras</h2>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                    </div>
-                    <div class="vstack gap-3">
-                        <div>
-                            <div class="d-flex justify-content-between mb-1 small fw-bold"><span>Desayuno Buffet</span><span>$4.2k</span></div>
-                            <div class="progress" style="height: 8px;"><div class="progress-bar bg-primary" style="width: 85%;"></div></div>
-                        </div>
-                        <div>
-                            <div class="d-flex justify-content-between mb-1 small fw-bold"><span>Cochera Privada</span><span>$2.8k</span></div>
-                            <div class="progress" style="height: 8px;"><div class="progress-bar bg-primary" style="width: 70%;"></div></div>
-                        </div>
-                        <div>
-                            <div class="d-flex justify-content-between mb-1 small fw-bold"><span>Masajes Spa</span><span>$1.5k</span></div>
-                            <div class="progress" style="height: 8px;"><div class="progress-bar bg-primary" style="width: 45%;"></div></div>
-                        </div>
-                        <div>
-                            <div class="d-flex justify-content-between mb-1 small fw-bold"><span>Traslados</span><span>$1.2k</span></div>
-                            <div class="progress" style="height: 8px;"><div class="progress-bar bg-primary" style="width: 30%;"></div></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Distribución de Ingresos -->
-            <div class="col-md-6 col-lg-4">
-                <section class="card border-0 shadow-sm h-100 p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="h5 fw-bold mb-0 text-dark">Distribución de Ingresos</h2>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-                    </div>
-                    <div class="d-flex flex-column align-items-center gap-4 mt-2">
-                        <div class="pie-chart shadow-sm" style="width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(#1e293b 0% 45%, #475569 45% 75%, #94a3b8 75% 100%);"></div>
-                        <div class="w-100">
-                            <div class="d-flex align-items-center gap-2 mb-1 small"><div class="bg-dark rounded-circle" style="width:10px; height:10px;"></div> Suites (45%)</div>
-                            <div class="d-flex align-items-center gap-2 mb-1 small"><div class="bg-secondary rounded-circle" style="width:10px; height:10px;"></div> Dobles (30%)</div>
-                            <div class="d-flex align-items-center gap-2 mb-1 small"><div class="bg-light border rounded-circle" style="width:10px; height:10px;"></div> Simples (25%)</div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Estacionalidad de Consultas -->
-            <div class="col-md-6 col-lg-8">
-                <section class="card border-0 shadow-sm h-100 p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="h5 fw-bold mb-0 text-dark">Estacionalidad de Consultas</h2>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    </div>
-                    <div class="d-flex align-items-end gap-2 h-100 overflow-hidden pt-4" style="min-height: 200px;">
-                        <div class="flex-grow-1 bg-primary opacity-25 rounded-top" style="height: 40%;" title="Ene"></div>
-                        <div class="flex-grow-1 bg-primary opacity-50 rounded-top" style="height: 55%;" title="Feb"></div>
-                        <div class="flex-grow-1 bg-primary opacity-75 rounded-top" style="height: 85%;" title="Mar"></div>
-                        <div class="flex-grow-1 bg-primary rounded-top" style="height: 95%;" title="Abr"></div>
-                        <div class="flex-grow-1 bg-primary opacity-75 rounded-top" style="height: 70%;" title="May"></div>
-                        <div class="flex-grow-1 bg-primary opacity-50 rounded-top" style="height: 60%;" title="Jun"></div>
+            <div class="col-lg-12">
+                <section class="card border-0 shadow-sm p-4">
+                    <h2 class="h5 fw-bold mb-4">Próximas Reservas</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Huésped</th>
+                                    <th>Habitación</th>
+                                    <th>Check-in</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Juan Pérez</td>
+                                    <td>Hab. 104 (Suite)</td>
+                                    <td>Hoy, 14:00</td>
+                                    <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                                </tr>
+                                <tr>
+                                    <td>María García</td>
+                                    <td>Hab. 202 (Doble)</td>
+                                    <td>Mañana</td>
+                                    <td><span class="badge bg-success">Confirmada</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
             </div>
         </div>
+
     </main>
 </body>
 </html>

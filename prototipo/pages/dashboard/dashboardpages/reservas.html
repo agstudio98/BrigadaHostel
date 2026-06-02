@@ -77,10 +77,10 @@
                         <h3 style="font-size: 1.5rem; font-weight: 700;">Gestión de Reserva</h3>
                         <p class="header-subtitle">Módulo para actualizar datos, confirmar llegadas o cancelar estadías de forma centralizada.</p>
                     </div>
-                    <label for="toggle-gestion" class="btn-outline" style="cursor: pointer;">
+                    <button type="button" class="btn-outline" onclick="document.getElementById('toggle-gestion').click()">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                        Cerrar edición
-                    </label>
+                        Cerrar Gestión
+                    </button>
                 </div>
 
                 <form action="#">
@@ -140,9 +140,9 @@
                         
                         <!-- Acciones de Gestión (Derecha) -->
                         <div style="display: flex; gap: 16px;">
-                            <label for="toggle-checkin" class="btn-outline flex-center" style="color: var(--accent-green); border-color: #dcfce7; cursor: pointer; min-width: 160px;">
+                            <button type="button" class="btn-outline flex-center" onclick="document.getElementById('toggle-checkin').click()" style="color: var(--accent-green); border-color: #dcfce7; cursor: pointer; min-width: 160px;">
                                 Confirmar Check-in
-                            </label>
+                            </button>
                             <button type="submit" class="btn-premium" style="min-width: 160px;">
                                 Actualizar Reserva
                             </button>
