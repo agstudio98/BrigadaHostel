@@ -58,42 +58,25 @@ Ambas páginas muestran el logo del hostel y la tarjeta de autenticación centra
 
 ## Módulos del Panel
 
-### Dashboard — Resumen General
+### Dashboard — Gestión según Rol
 
-Es la pantalla principal luego de autenticarse. Está orientada a brindar una visión rápida del rendimiento comercial y operativo del hostel.
+El Dashboard ha sido rediseñado para ofrecer una experiencia diferenciada según el perfil del usuario, eliminando métricas genéricas y enfocándose en la operatividad real de un hostel.
 
-**Métricas principales (fila de tarjetas):**
-
-| Métrica | Valor de ejemplo | Indicador |
-|---|---|---|
-| Anticipación Promedio de Reserva | 12.4 días | ▲ vs mes pasado |
-| Tasa de Abandono en Checkout | 24.8% | ▼ mejora del 5% |
-| Ratio de Cancelación | 4.2% | ▲ riesgo |
-| Estadía Promedio (LOS) | 3.2 noches | ▲ 0.5 noches |
-
-**Gráficos y análisis detallados:**
-
-- **Embudo de Conversión** — Recorrido del usuario desde la búsqueda hasta la reserva efectiva: Búsquedas (4.2k) → Ver disponibilidad (2.7k) → Calcular costo (1.2k) → Registrar reserva (504).
-- **Top Servicios Extras** — Ranking de servicios adicionales más vendidos: Desayuno Buffet ($4.2k), Cochera Privada ($2.8k), Masajes Spa ($1.5k), Traslados ($1.2k), Lavandería ($0.8k).
-- **Distribución de Ingresos** — Gráfico de torta CSS por tipo de habitación: Suites 45%, Dobles 30%, Simples 25%.
-- **Estacionalidad de Consultas** — Gráfico de barras verticales con la demanda mensual de enero a junio.
-- **Canales de Venta** — Comparación entre Web Site (70% — $8.4k) y Mobile App (30% — $3.6k).
-- **Impacto de Extras en el Ticket** — Ticket base promedio ($145) vs ticket final con extras ($192.50).
+-   **Vista Administrador**: Enfocada en el rendimiento del negocio (Ocupación mensual, Ingresos del día, Total de reservas activas).
+-   **Vista Staff (Recepcionista)**: Enfocada en la operativa diaria (Check-ins pendientes, Habitaciones por limpiar, Disponibilidad inmediata).
+-   **Listado de Actividad**: Una sección común para monitorear los movimientos recientes de huéspedes.
 
 ---
 
 ### Reservas — Flujo de Registro
 
-Página orientada al registro de nuevas estadías. El proceso está dividido en **4 pasos secuenciales** mediante un stepper visual.
+Siguiendo el modelado de Casos de Uso, el proceso de registro se ha simplificado en 3 pasos clave dentro del sistema de recepción:
 
-| Paso | Contenido |
-|---|---|
-| **1 — Selección de Fechas** | Formulario con Fecha de Entrada y Fecha de Salida. El botón "Ver Disponibilidad" avanza al paso 2. |
-| **2 — Tipo de Habitación** | **Dormitorio Compartido** ($20/noche — 8 camas, Wifi, Locker) y **Habitación Privada Deluxe** ($55/noche — Cama King, Baño Suite, Aire Acondicionado). |
-| **3 — Servicios y Resumen** | Servicios adicionales (Desayuno Buffet +$12/día, Traslado al Aeropuerto +$25) con resumen de costos: estadía, servicios, impuestos (10%) y total final. |
-| **4 — Confirmación** | Pantalla de éxito con ícono de check verde, código de reserva (`#BH-9921`), descarga PDF y botón para volver al Dashboard. |
+1.  **Verificar Disponibilidad**: El recepcionista ingresa datos del huésped y fechas para consultar el inventario libre.
+2.  **Habitación y Servicios**: Selección de la habitación disponible y agregado de servicios extra (Desayuno, Cochera, etc.).
+3.  **Confirmar y Registrar**: Resumen de costos totales con impuestos y confirmación final para persistencia en el sistema.
 
-La navegación entre pasos funciona mediante anclas HTML (`#paso1`, `#paso2`, etc.), sin JavaScript.
+Este flujo unifica la "Reserva de Habitación" con el "Registrar Reserva", eliminando redundancias conceptuales.
 
 ---
 

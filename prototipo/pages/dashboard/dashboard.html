@@ -3,15 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Inicio</title>
+    <title>Dashboard - Brigada Hostel</title>
     <link rel="stylesheet" href="../../style/dashboard.css">
+    <style>
+        /* Estilos específicos para el cambio de rol (Simulación CSS puro) */
+        .role-admin-content, .role-staff-content { display: none; }
+        #role-admin:checked ~ main .role-admin-content { display: block; }
+        #role-staff:checked ~ main .role-staff-content { display: block; }
+        
+        /* Estilo para los botones de cambio de rol */
+        .role-switcher {
+            background: #f1f5f9;
+            padding: 4px;
+            border-radius: 8px;
+            display: inline-flex;
+            gap: 4px;
+        }
+        .role-btn {
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        #role-admin:checked ~ header .role-btn-admin,
+        #role-staff:checked ~ header .role-btn-staff {
+            background: var(--bg-sidebar);
+            color: white;
+        }
+    </style>
 </head>
 <body class="bg-light">
 
-    <!-- CONTROL DE MENÚ MÓVIL (SÓLO CSS) -->
-    <input type="checkbox" id="menu-cb" hidden>
+    <!-- SELECTORES DE ROL (SÓLO CSS) -->
+    <input type="radio" name="role-toggle" id="role-admin" checked hidden>
+    <input type="radio" name="role-toggle" id="role-staff" hidden>
 
-    <!-- OVERLAY PARA MÓVIL -->
+    <!-- CONTROL DE MENÚ MÓVIL -->
+    <input type="checkbox" id="menu-cb" hidden>
     <label for="menu-cb" class="sidebar-overlay"></label>
 
     <!-- BARRA LATERAL (SIDEBAR) -->
@@ -19,33 +49,27 @@
         <div class="sidebar-brand p-4 border-bottom border-secondary">
             <div class="d-flex align-items-center gap-3">
                 <div class="bg-primary p-2 rounded shadow-sm">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 </div>
                 <div>
-                    <h2 class="h6 mb-0 fw-bold text-uppercase tracking-tight">Panel Dashboard</h2>
-                    <p class="small text-secondary mb-0">BrigadaHostel</p>
+                    <h2 class="h6 mb-0 fw-bold text-uppercase">Brigada Hostel</h2>
+                    <p class="small text-secondary mb-0">Gestión Interna</p>
                 </div>
             </div>
         </div>
         <nav class="p-3">
             <ul class="nav flex-column gap-1">
-                <li class="nav-item"><a href="dashboard.html" class="nav-link active rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> Resumen</a></li>
-                <li class="nav-item"><a href="dashboardpages/reservas.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> Reservas</a></li>
-                <li class="nav-item"><a href="dashboardpages/recepcion.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Recepción</a></li>
-                <li class="nav-item"><a href="dashboardpages/metricas.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> Métricas</a></li>
-                <li class="nav-item"><a href="dashboardpages/huespedes.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Huéspedes</a></li>
-                <li class="nav-item"><a href="dashboardpages/operaciones.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> Operaciones</a></li>
-                <li class="nav-item"><a href="dashboardpages/configuracion.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Configuración</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link active rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> Resumen</a></li>
+                <li class="nav-item"><a href="dashboardpages/reservas.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg> Reservas</a></li>
+                <li class="nav-item"><a href="dashboardpages/recepcion.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg> Recepción</a></li>
+                <!-- Módulos sólo visibles para Admin en la simulación real, aquí simplificados -->
+                <li class="nav-item role-admin-content"><a href="dashboardpages/metricas.html" class="nav-link text-secondary rounded d-flex align-items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line></svg> Métricas</a></li>
             </ul>
         </nav>
         <div class="sidebar-footer p-3 border-top border-secondary mt-auto">
-            <a href="dashboardauth/loginDashboard.html" class="btn btn-outline-danger w-100 d-flex align-items-center justify-content-center gap-2 mb-2 py-2 shadow-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-                Cerrar Sesión
-            </a>
-            <a href="../index.html" class="btn btn-link text-secondary w-100 d-flex align-items-center justify-content-center gap-2 text-decoration-none small">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                Volver al sitio web
+            <a href="dashboardauth/loginDashboard.html" class="btn btn-outline-danger w-100 d-flex align-items-center justify-content-center gap-2 py-2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline></svg>
+                Salir
             </a>
         </div>
     </aside>
@@ -54,106 +78,125 @@
     <header class="bg-white shadow-sm px-4 py-3 d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center gap-3">
             <label for="menu-cb" class="btn btn-light d-lg-none">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </label>
             <div>
-                <h1 class="h4 mb-0 fw-bold text-dark">Dashboard de Reservas</h1>
-                <p class="small text-muted mb-0">Enfoque en el Usuario y Rentabilidad</p>
+                <h1 class="h4 mb-0 fw-bold text-dark">Panel de Control</h1>
+                <p class="small text-muted mb-0">Bienvenido al sistema de gestión</p>
             </div>
         </div>
-        <div class="user-info d-flex align-items-center gap-3">
-            <span class="fw-semibold text-secondary d-none d-md-inline">Admin</span>
-            <div class="bg-primary p-2 rounded-circle shadow-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+
+        <div class="d-flex align-items-center gap-4">
+            <!-- SIMULACIÓN DE CAMBIO DE ROL -->
+            <div class="role-switcher shadow-sm border">
+                <label for="role-admin" class="role-btn role-btn-admin">Admin</label>
+                <label for="role-staff" class="role-btn role-btn-staff">Staff</label>
+            </div>
+
+            <div class="user-info d-flex align-items-center gap-2 px-3 py-1 bg-light rounded-pill border">
+                <span class="fw-bold small role-admin-content text-primary">Administrador</span>
+                <span class="fw-bold small role-staff-content text-success">Recepcionista</span>
+                <div class="bg-secondary rounded-circle p-1" style="width: 28px; height: 28px;">
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- SECCIÓN DE MÉTRICAS RÁPIDAS -->
     <main class="p-4">
-        <!-- MÉTRICAS CLAVE -->
-        <div class="row g-4 mb-4">
-            <!-- Tasa de Ocupación -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card h-100 border-0 shadow-sm p-3">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Ocupación Hoy</h3>
-                        <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-                        </div>
+        
+        <!-- CONTENIDO VISTA ADMINISTRADOR -->
+        <div class="role-admin-content animate-fade">
+            <h2 class="h5 fw-bold mb-4 text-primary">Resumen de Negocio (Admin)</h2>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                        <h3 class="small fw-bold text-muted text-uppercase mb-3">Ocupación Mensual</h3>
+                        <div class="h2 fw-bold">78%</div>
+                        <p class="small text-success fw-bold">▲ 4% vs mes anterior</p>
                     </div>
-                    <div class="h2 fw-bold text-dark mb-1">85%</div>
-                    <div class="small text-success fw-bold">12 habitaciones ocupadas</div>
                 </div>
-            </div>
-            <!-- Próximos Check-ins -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card h-100 border-0 shadow-sm p-3">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Check-ins Hoy</h3>
-                        <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-                        </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                        <h3 class="small fw-bold text-muted text-uppercase mb-3">Ingresos (Hoy)</h3>
+                        <div class="h2 fw-bold">$12,450</div>
+                        <p class="small text-muted">Ventas netas del día</p>
                     </div>
-                    <div class="h2 fw-bold text-dark mb-1">5</div>
-                    <div class="small text-primary fw-bold">Pendientes de ingreso</div>
                 </div>
-            </div>
-            <!-- Habitaciones Disponibles -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card h-100 border-0 shadow-sm p-3">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Disponibles</h3>
-                        <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
-                        </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                        <h3 class="small fw-bold text-muted text-uppercase mb-3">Reservas Activas</h3>
+                        <div class="h2 fw-bold">42</div>
+                        <p class="small text-primary fw-bold">12 nuevas esta semana</p>
                     </div>
-                    <div class="h2 fw-bold text-dark mb-1">3</div>
-                    <div class="small text-info fw-bold">Listas para asignar</div>
-                </div>
-            </div>
-            <!-- Limpieza Requerida -->
-            <div class="col-sm-6 col-xl-3">
-                <div class="card h-100 border-0 shadow-sm p-3">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h3 class="small fw-bold text-uppercase text-muted mb-0">Limpieza</h3>
-                        <div class="bg-light p-2 rounded">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                        </div>
-                    </div>
-                    <div class="h2 fw-bold text-dark mb-1">2</div>
-                    <div class="small text-danger fw-bold">Habitaciones sucias</div>
                 </div>
             </div>
         </div>
 
-        <!-- LISTADO RÁPIDO DE ACTIVIDAD -->
-        <div class="row g-4">
-            <div class="col-lg-12">
-                <section class="card border-0 shadow-sm p-4">
-                    <h2 class="h5 fw-bold mb-4">Próximas Reservas</h2>
+        <!-- CONTENIDO VISTA STAFF / RECEPCIÓN -->
+        <div class="role-staff-content animate-fade">
+            <h2 class="h5 fw-bold mb-4 text-success">Operativa del Día (Staff)</h2>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white border-start border-4 border-primary">
+                        <h3 class="small fw-bold text-muted text-uppercase mb-3">Check-ins Pendientes</h3>
+                        <div class="h2 fw-bold">5</div>
+                        <p class="small text-muted">Llegadas esperadas hoy</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white border-start border-4 border-warning">
+                        <h3 class="small fw-bold text-muted text-uppercase mb-3">Limpieza Pendiente</h3>
+                        <div class="h2 fw-bold">3</div>
+                        <p class="small text-danger fw-bold">Habitaciones por preparar</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white border-start border-4 border-info">
+                        <h3 class="small fw-bold text-muted text-uppercase mb-3">Disponibles</h3>
+                        <div class="h2 fw-bold">4</div>
+                        <p class="small text-info fw-bold">Listas para check-in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN COMÚN: LISTADO DE ACTIVIDAD -->
+        <div class="row g-4 mt-2">
+            <div class="col-12">
+                <section class="card border-0 shadow-sm p-4 bg-white">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="h5 fw-bold mb-0">Actividad de Recepción</h2>
+                        <a href="dashboardpages/reservas.html" class="btn btn-sm btn-primary">Ver todas</a>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-hover align-middle">
                             <thead class="table-light">
                                 <tr>
                                     <th>Huésped</th>
                                     <th>Habitación</th>
-                                    <th>Check-in</th>
+                                    <th>Acción</th>
                                     <th>Estado</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Juan Pérez</td>
-                                    <td>Hab. 104 (Suite)</td>
-                                    <td>Hoy, 14:00</td>
+                                    <td class="fw-bold">Juan Pérez</td>
+                                    <td>104 (Suite)</td>
+                                    <td>Check-in</td>
                                     <td><span class="badge bg-warning text-dark">Pendiente</span></td>
                                 </tr>
                                 <tr>
-                                    <td>María García</td>
-                                    <td>Hab. 202 (Doble)</td>
-                                    <td>Mañana</td>
-                                    <td><span class="badge bg-success">Confirmada</span></td>
+                                    <td class="fw-bold">Ana Martínez</td>
+                                    <td>205 (Doble)</td>
+                                    <td>Check-out</td>
+                                    <td><span class="badge bg-primary">En curso</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Roberto Gómez</td>
+                                    <td>101 (Simple)</td>
+                                    <td>Limpieza</td>
+                                    <td><span class="badge bg-info">Programada</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -163,5 +206,18 @@
         </div>
 
     </main>
+
+    <script>
+        // Pequeño script para asegurar que las animaciones se vean fluidas al cambiar de rol
+        document.querySelectorAll('input[name="role-toggle"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const main = document.querySelector('main');
+                main.style.opacity = '0';
+                setTimeout(() => {
+                    main.style.opacity = '1';
+                }, 50);
+            });
+        });
+    </script>
 </body>
 </html>
